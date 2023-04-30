@@ -46,8 +46,8 @@ const App = () => {
   const badFeedback = () => setBad(bad + 1);
 
   const total = good + neutral + bad
-  const average = (good - bad) / total || 0
-  const positivePercentage = (good * 100 / total) || 0
+  const average = ((good - bad) / total).toFixed(2) || 0
+  const positivePercentage = (good * 100 / total).toFixed(2) + '%' || 0
 
   return (
     <div>
